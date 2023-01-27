@@ -1,16 +1,19 @@
-{% extends 'base.html' %} 
+{% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-<h1>HELLO this is main page.  </h1>
+{% block tilte %} Магазин {% endblock %}
+<h1>Добро пожаловать на главную страницу  </h1>
 
 <form action="">
     <div class="mb-3">
-      <label class="form-label">Search for products:</label>
+      <label class="form-label">Поиск всякой всячины:</label>
       <input type="text" name="searchProduct" class="form-control" />
     </div>
     <button type="submit" class="btn btn-primary">
-      Search
+      Искать!
     </button>
   </form>
   </div>
 
-{% endblock content %}
+{% endblock %}

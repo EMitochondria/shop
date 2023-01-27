@@ -1,8 +1,9 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shop for something</title>
+    <title> {% block tilte %} {% endblock %} </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
@@ -16,7 +17,7 @@
    
           <img src="{% static 'images/shop.png' %}" alt="" width="30" height="24"
             class="d-inline-block align-text-top" />
-          Shop
+          Магазин
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,24 +25,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="">News</a>
-            <a class="nav-link" href="#">Login</a>
-            <a class="nav-link" href="#">Sign Up</a>
+            <a class="nav-link" href="{% url 'core:index' %}">Главная страница</a>
+            <a class="nav-link" href="">Обо мне</a>
+            <a class="nav-link" href="">Новости</a>
+            <a class="nav-link" href="#">Логин</a>
+            <a class="nav-link" href="#">Регистрация</a>
           </div>
         </div>
       </div>
     </nav>
     
-    <div class="container">
-      {% block content %}
+    {% block content %}
 
-            Контента нет
+    Нет контента! 
 
-      {% endblock content %}
+    {% endblock %}
 
-      <footer>
-        {% include 'includes/footer.html' %} 
-      </footer>
-
-  </body>
-</html>
+{% include "includes/footer.html" %}
