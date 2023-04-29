@@ -16,3 +16,7 @@ def product_detail(request, product_id):
         'product': product,
     }
     return render(request, 'product_detail.html', context)
+
+
+def about(request):
+    return render(request, 'about.html')
