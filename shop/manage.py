@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python  
+# файл управления Django-проектом из командной строки
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
